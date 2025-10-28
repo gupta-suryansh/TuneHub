@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "../../components/sidebar";
 import { setClientToken } from "../../spotify";
-import Login from "../auth/login";
+// import Login from "../auth/login";
 import Favorites from "../favorites";
 import Feed from "../feed";
 import Library from "../library";
@@ -28,9 +28,8 @@ export default function Home() {
     }
   }, []);
 
-  return !token ? (
-    <Login />
-  ) : (
+  return  (
+    // <Login />
     <Router>
       <div className="main-body">
         <Sidebar />
